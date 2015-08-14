@@ -33,7 +33,7 @@ namespace DownCount.ConsoleTester
         private static void PlayGame()
         {
             // Read in a list of integers for the game
-            Console.WriteLine("Enter a comma seperated list of integers, e.g. 3,5,67,8 , and press enter");
+            Console.WriteLine("Enter a comma seperated list of integers, e.g. 3,5,67,8 and press enter");
             string input = Console.ReadLine();
             IntegerSet numbers = GetNumbers(input);
             while (numbers == null)
