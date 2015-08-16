@@ -9,8 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownCount.Entities.Test", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9090CCE3-0CBE-4CCE-916E-A51E88A8472D}"
 	ProjectSection(SolutionItems) = preProject
+		Downcount console tester.jpg = Downcount console tester.jpg
 		DownCount.vsmdi = DownCount.vsmdi
 		Local.testsettings = Local.testsettings
+		README.md = README.md
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
@@ -23,29 +25,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownCount.Console", "DownCount.Console\DownCount.Console.csproj", "{B2159EF1-612C-45D3-9C02-D14849105B71}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://shiningdragon.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = DownCount.Entities\\DownCount.Entities.csproj
-		SccProjectName1 = DownCount.Entities
-		SccLocalPath1 = DownCount.Entities
-		SccProjectUniqueName2 = DownCount.Entities.Test\\DownCount.Entities.Test.csproj
-		SccProjectTopLevelParentUniqueName2 = DownCount.sln
-		SccProjectName2 = DownCount.Entities.Test
-		SccLocalPath2 = DownCount.Entities.Test
-		SccProjectUniqueName3 = DownCount.Engine\\DownCount.Engine.csproj
-		SccProjectName3 = DownCount.Engine
-		SccLocalPath3 = DownCount.Engine
-		SccProjectUniqueName4 = DownCount.Engine.Test\\DownCount.Engine.Test.csproj
-		SccProjectTopLevelParentUniqueName4 = DownCount.sln
-		SccProjectName4 = DownCount.Engine.Test
-		SccLocalPath4 = DownCount.Engine.Test
-		SccProjectUniqueName5 = DownCount.Console\\DownCount.Console.csproj
-		SccProjectName5 = DownCount.Console
-		SccLocalPath5 = DownCount.Console
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms

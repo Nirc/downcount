@@ -9,7 +9,7 @@ using DownCount.Entities.Equations;
 namespace DownCount.Engine
 {
     /// <summary>
-    /// The calculation engine that solves a game of downcount. The algorithm uses recursive and brute force 
+    /// The calculation engine that solves a game of downcount. The algorithm uses recursion and brute force 
     /// to iterate through all possible arithmitic combinations of the numbers
     /// looking for all solutions e.g.
     /// The set of solutions to the game, y from (x1, x2, x3...xn), is equivalent to the set of solutions to

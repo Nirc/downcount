@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 using DownCount.Entities;
 using DownCount.Engine;
+using DownCount.Entities.Equations;
 
 namespace DownCount.ConsoleTester
 {
@@ -56,44 +59,103 @@ namespace DownCount.ConsoleTester
             }
 
             Console.WriteLine();
-            Console.WriteLine("The game is to find {0} from the set of numbers {1}", targetNumber, numbers.ToString());
+            Console.WriteLine("The game is to find {0} from the set of numbers {1}, you have 30 seconds starting from now", targetNumber, numbers.ToString());
             Console.WriteLine();
 
-            // Display the solutions
-            Solutions solutions = DownCountSolver.Solve(false, targetNumber, numbers.ToArray());
-            if (solutions.Count == 0)
-            {
-                Console.WriteLine("No exact solutions found");
- 
-                //Look for a 'close' soltion
-                for (int i = 1; i <= 10; ++i)
-                {
-                    int closeTargetNumber = targetNumber - i;
-                    solutions = DownCountSolver.Solve(false, closeTargetNumber, numbers.ToArray());
-                    if (solutions.Count > 0)
-                    {
-                        Console.WriteLine("Solution found within {0} of the original target number", i.ToString());
-                        Console.WriteLine("{0} = {1}", closeTargetNumber, solutions[0].ToString());
-                        break;
-                    }
+            // Show Timer
+            Task timer = Task.Factory.StartNew(() => TimerCountDown(30));            
 
-                    closeTargetNumber = targetNumber +i;
-                    solutions = DownCountSolver.Solve(false, closeTargetNumber, numbers.ToArray());
-                    if (solutions.Count > 0)
+            // Calculate Answer
+            DownCountGame game = new DownCountGame(targetNumber, numbers);
+            Task<Solutions> calculationTask = CalculateSoultionASync(game);
+
+            timer.Wait();
+
+            // Display Result
+            if (calculationTask.IsCompleted)
+            {
+                try
+                {
+                    Solutions solutions = calculationTask.Result;
+                    if (solutions.Count == 0)
                     {
-                        Console.WriteLine("Solution found within {0} of the original target number", i.ToString());
-                        Console.WriteLine("{0} = {1}", closeTargetNumber, solutions[0].ToString());
-                        break;
+                        Console.WriteLine("Downcount could not find a solution");
                     }
+                    else
+                    {
+                        IEquation solution = solutions[0];
+                        if (solution.Value == game.TargetNumber)
+                        {
+                            Console.WriteLine("Downcount found an exact solution");
+                            Console.WriteLine("{0} = {1}", targetNumber, solution.ToString());
+                        }
+                        else
+                        {
+                            decimal closeValue = solution.Value;
+                            Console.WriteLine("Downcount found a solution within {0} of the original target number", game.TargetNumber - closeValue);
+                            Console.WriteLine("{0} = {1}", solution.Value, solution.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(string.Format("An error occured calculating the solution: {0}", ex.ToString()));
                 }
             }
             else
             {
-                Console.WriteLine("An exact solution was found");
-                Console.WriteLine("{0} = {1}", targetNumber, solutions[0].ToString());
+                // We ran out of time
+                Console.WriteLine("Downcount could not find a solution in the time given");
+            }
+            Console.WriteLine();  
+        }
+
+        /// <summary>
+        /// Calculate the solution to the game
+        /// </summary>
+        private static Task<Solutions> CalculateSoultionASync(DownCountGame game)
+        {
+            Task<Solutions> calculationTask = new Task<Solutions>(() => CalculateSolution(game));//, cancellSource.Token);
+            calculationTask.Start();
+            return calculationTask;
+        }
+
+        /// <summary>
+        /// Calculate the solution to the game
+        /// </summary>
+        private static Solutions CalculateSolution(DownCountGame game)
+        {
+            Solutions solutions = DownCountSolver.Solve(game, false);
+            if (solutions.Count == 0)
+            {
+                //Look for a 'close' soltion
+                DownCountGame closeGame = new DownCountGame(game.TargetNumber, game.Numbers.ToArray()); ;
+                for (int i = 1; i <= 10; ++i)
+                {
+                    closeGame.TargetNumber = game.TargetNumber - i;
+                    solutions = DownCountSolver.Solve(closeGame, false);
+                    if (solutions.Count > 0)
+                        return solutions;
+
+                    closeGame.TargetNumber = game.TargetNumber + i;
+                    solutions = DownCountSolver.Solve(closeGame, false);
+                    if (solutions.Count > 0)
+                        return solutions;
+                }
             }
 
-            Console.WriteLine();  
+            return solutions;
+        }
+
+        private static void TimerCountDown(int seconds)
+        {
+            for (int i = seconds; i >= 0; --i)
+            {
+                Thread.Sleep(1000);
+                Console.Write("\r{0} ", i);
+            }
+            Console.WriteLine();
+            Console.WriteLine();
         }
 
         /// <summary>

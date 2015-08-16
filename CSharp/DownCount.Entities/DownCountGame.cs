@@ -20,6 +20,12 @@ namespace DownCount.Entities
             Numbers = new IntegerSet(numbers);
         }
 
+        public DownCountGame(int target, IEnumerable<int> numbers)
+        {
+            TargetNumber = target;
+            Numbers = new IntegerSet(numbers);
+        }
+
         /// <summary>
         /// The number we are trying to solve
         /// </summary>
