@@ -1,0 +1,10 @@
+{
+  "name": "Downcount",
+  "version": "0.0.0",
+  "description": "Downcount",
+  "main": "server.js",
+  "author": {
+    "name": "ham",
+    "email": ""
+  }
+}
