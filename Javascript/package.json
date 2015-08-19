@@ -8,9 +8,11 @@
     "email": ""
   },
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2"
   },
   "dependencies": {
+    "async": "^1.4.2",
     "prompt": "^0.2.14"
   }
 }

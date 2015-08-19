@@ -2,6 +2,8 @@ An implementation of the famous Countdown Numbers game, written in a variety of 
 
 https://www.youtube.com/watch?v=n8-mx3RSvOQ
 
-A **C\#** implementation can be found <a href="https://github.com/shiningdragon/Downcount/tree/master/CSharp">here</a> 
+A **C\#** implementation can be found [here](https://github.com/shiningdragon/Downcount/tree/master/CSharp)
 
-Javascript and F# to follow
+A Javascript  implementation can be found [here](https://github.com/shiningdragon/Downcount/tree/master/Javascript)
+
+F# to follow
