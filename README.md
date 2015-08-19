@@ -4,6 +4,6 @@ https://www.youtube.com/watch?v=n8-mx3RSvOQ
 
 A **C\#** implementation can be found [here](https://github.com/shiningdragon/Downcount/tree/master/CSharp)
 
-A Javascript  implementation can be found [here](https://github.com/shiningdragon/Downcount/tree/master/Javascript)
+A **Javascript**  implementation can be found [here](https://github.com/shiningdragon/Downcount/tree/master/Javascript)
 
 F# to follow
