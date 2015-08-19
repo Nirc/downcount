@@ -74,30 +74,7 @@ function PlayGame() {
                     }
                 });
             }
-        }, 1000);
-        
-        
-
-        //setTimeout(function () {
-        //    if (solutions.Equations.length > 0) {
-        //        console.log('Downcount found an exact solution');
-        //        console.log(solutions.Equations[0].toString() + ' = ' + solutions.Equations[0].Value());
-        //    }
-        //    else {
-        //        console.log('Downcount couldn\'t find an exact solution');
-        //    }
-            
-        //    // Shall we play again
-        //    console.log('Do you wish to play again, Y/N');
-        //    prompt.start();
-        //    prompt.get(['playAgain'], function (err, result) {
-        //        if (err) { return onErr(err); }
-        //        if (result.playAgain == 'y' || result.playAgain == 'Y') {
-        //            PlayGame();
-        //        }
-        //    });
-        //}, 30000);
-        
+        }, 1000);        
     });
 }
 
