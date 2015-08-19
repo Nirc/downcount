@@ -6,5 +6,11 @@
   "author": {
     "name": "ham",
     "email": ""
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "dependencies": {
+    "prompt": "^0.2.14"
   }
 }
