@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="DownCountSolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomNumberHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DownCount.Entities\DownCount.Entities.csproj">
