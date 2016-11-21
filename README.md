@@ -6,4 +6,6 @@ A **C\#** implementation can be found [here](https://github.com/shiningdragon/Do
 
 A **Javascript**  implementation can be found [here](https://github.com/shiningdragon/Downcount/tree/master/Javascript)
 
-F# to follow
+A **.NET Core** implementation can be found [here](https://github.com/shiningdragon/Downcount/tree/master/DontNetCore)
+
+F# and Powershell to follow
