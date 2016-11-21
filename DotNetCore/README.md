@@ -1,7 +1,9 @@
-A .NET Core implementation. Using the same implementation as the [C#](https://github.com/shiningdragon/Downcount/tree/master/CSharp)
- version
+See this [blog post](https://shiningdragonsoftware.net/2016/11/21/net-core-devops-on-linux-part-1-running-our-first-net-core-application-on-linux/) for a full write up
 
-It includes a simple command line application that you can execute Using
+
+A .NET Core implementation using the same algorithm as the [C#](https://github.com/shiningdragon/Downcount/tree/master/CSharp) version
+
+It includes a simple command line application that you can execute using
 
 **dotnet Downcount.Console.dll**
 
