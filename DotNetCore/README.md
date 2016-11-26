@@ -9,6 +9,8 @@ It includes a simple command line application that you can execute using
 
 There is also an ASP.NET Core Web API service that exposes the solution engine as a service
 
+https://shiningdragonsoftware.net/2016/11/26/net-core-and-devops-part-2-running-our-first-asp-net-core-service-on-linux/
+
 ![Screenshot](https://github.com/shiningdragon/Downcount/blob/master/DotNetCore/downcount.service.PNG "Screenshot")
 
 
