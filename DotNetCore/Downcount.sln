@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DownCount.Engine", "DownCount.Engine\DownCount.Engine.xproj", "{1E321626-338E-4E61-B00A-E0FB2A31B8D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DownCount.Engine", "DownCount.Engine\DownCount.Engine.csproj", "{1E321626-338E-4E61-B00A-E0FB2A31B8D4}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DownCount.Entities", "DownCount.Entities\DownCount.Entities.xproj", "{E9B30912-8F5D-408F-B20E-93244323593E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DownCount.Entities", "DownCount.Entities\DownCount.Entities.csproj", "{E9B30912-8F5D-408F-B20E-93244323593E}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Downcount.Console", "Downcount.Console\Downcount.Console.xproj", "{AE51EA84-83D7-490C-A994-8FC71147F633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Downcount.Console", "Downcount.Console\Downcount.Console.csproj", "{AE51EA84-83D7-490C-A994-8FC71147F633}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DownCount.Service", "DownCount.Service\DownCount.Service.xproj", "{02944161-70FA-44EE-B146-64662F04EBFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DownCount.Service", "DownCount.Service\DownCount.Service.csproj", "{02944161-70FA-44EE-B146-64662F04EBFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
